@@ -41,3 +41,26 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+# KiCad fabrication outputs (regenerable)
+hardware/kicad/outputs/
+
+# FPGA build artefacts
+firmware/fpga/build/
+*.bit
+*.cfg
+*.fasm
+
+# x86 build artefacts
+firmware/x86/**/*.bin
+firmware/x86/**/*.o
+firmware/x86/**/*.lst
+firmware/x86/**/*.map
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
