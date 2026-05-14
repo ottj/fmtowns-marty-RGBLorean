@@ -4,20 +4,47 @@
 
 | Marty physical | Size | Function |
 |---|---|---|
-| `0x00D00000–0x00DFFFFF` | 1 MB | IC card common memory window (bank-switched) |
-| I/O `0x0490–0x0491` | 2 bytes | Bank register (R/W) — selects which 1 MB of card space is mapped |
+| `0x00D00000–0x00DFFFFF` | 1 MB | IC card common memory window |
+| I/O `0x048A` | 1 byte | Card-status / write-protect (read) — internal to the controller |
+| I/O `0x0490` | 1 byte | Bank-register low byte — **internal to the controller, never reaches the card** |
+| I/O `0x0491` | 1 byte | Attribute-memory select (`REG#`) + card-type read — internal to the controller |
+
+### Who decodes the bank register?
+
+The bank register at I/O `0x0490` is **decoded entirely inside the Marty's IC-card controller** on the motherboard, *not* on the card. Confirmed by reading the Tsugaru source ([`src/towns/memory/physmem.cpp`](https://github.com/captainys/TOWNSEMU/blob/master/src/towns/memory/physmem.cpp)):
+
+```cpp
+case TOWNSIO_MEMCARD_BANK: //             0x490
+    state.memCardBank = (data & 0x3F);
+case TOWNSIO_MEMCARD_ATTRIB: //           0x491
+    state.memCardREG  = (0 != (data & 1));
+```
+
+The controller stores `memCardBank` and `memCardREG` internally and *translates* every CPU access to the `0xD00000` window into a bus cycle on the card with the appropriate address bits driven from the bank value. No I/O cycle ever reaches the PCMCIA bus pins.
+
+**Implications for RGBLorean:**
+
+1. The FPGA target does **not** need to implement an I/O-cycle decoder for `0x0490` / `0x0491`. `MA_IORD_N` / `MA_IOWR_N` from the PCMCIA bus are never asserted during normal Marty memory-window accesses, and the bank register isn't seen by the card.
+2. The FPGA simply consumes the **26-bit address** the controller drives onto `A[25:0]`. Whatever bank the CPU has programmed, the resulting linear address is what the FPGA sees.
+3. The 4 PCMCIA control pins we wired through U_LS4 group 1 (`MA_IORD_N`, `MA_IOWR_N`) can therefore stay marked DNP / unused on the Marty target without functional loss. Keep them on the schematic for future PCMCIA-compatible designs but they have no firmware consequence here.
+4. Tsugaru models a slightly looser address mapping on Marty (386SX): the 1 MB window at `0x00D00000` maps directly to `memCard.data[physAddr & 0xFFFFF]` without applying `memCardBank`. So in Tsugaru, only the first 1 MB of the card image is reachable in the Marty configuration — banking is a no-op for the 386SX path. Verify against real hardware once the FPGA card is fabricated.
 
 ## Card-side address space (FPGA-visible)
 
-Total presented: **64 MB** maximum (26-bit, `bank << 20 | addr[19:0]`). Actual decoded ranges:
+Given the controller-side banking story above, the FPGA sees a single linear address space driven by `A[25:0]`. We organise our internal storage as:
 
 | Card offset | Size | Backing | Notes |
 |---|---|---|---|
-| `0x00000000` | 4 KB | FPGA block RAM (mailbox) | Always visible regardless of bank — alias into every bank's first page |
-| `0x00001000–0x000FFFFF` | ~1 MB | FPGA block RAM (IPL + resident driver image) | Read-only from Marty; written by FPGA from SD at boot |
-| `0x00100000–0x03FFFFFF` | up to 63 MB | SD card window (paged DMA) | Used for staging large reads if needed |
+| `0x00000000–0x000003FF` | 1 KB | FPGA block RAM (mailbox) | Host ↔ FPGA control region (struct below) |
+| `0x00000400–0x000007FF` | 1 KB | FPGA block RAM (IPL payload, sector 1) | Read-only from Marty; built by `firmware/x86/ipl/` |
+| `0x00000000–0x0007FFFF` | up to 512 KB | FPGA block RAM (boot sector + IPL + initial resident driver image) | Read-only; written by FPGA from SD at boot if larger images become necessary |
+| `0x00080000–0x000FFFFF` | up to 512 KB | SD card streaming window | Used for staging sector reads beyond the BRAM footprint |
 
-## Mailbox layout (offset `0x00000000` within window, bank-independent)
+Initial FPGA capacity (Phase 1) is just the first 8 KB of BRAM; later phases can fan out to SDRAM-backed regions.
+
+**Sector-size convention:** Marty IC-card sectors are **1024 bytes**, not 512. The boot sector (sector 0) lives at file offsets `0x000..0x3FF`; the IPL payload (sector 1, LBA=1) at `0x400..0x7FF`. See `docs/context.md §5` and `firmware/x86/ipl/` for the verified layout.
+
+## Mailbox layout (offset `0x00000000` within window)
 
 ```c
 struct mailbox {
@@ -33,6 +60,8 @@ struct mailbox {
     volatile uint8_t  sector_data[2048];// 0x800 — DATA: returned by FPGA
 };
 ```
+
+Note: the mailbox struct occupies offsets `0x000..0xFFF` (4 KB) of card space and lives **inside the boot sector**. The IPL4 magic (offset 0), LBA pointer (offset 0x20) and sector count (offset 0x24) overlay the first few mailbox fields. This is intentional: at power-on the FPGA initialises BRAM such that the first 64 bytes are a valid IPL4 boot sector, and the mailbox `command`/`status` reuse the otherwise-padding region after offset 0x28. The x86 driver must avoid disturbing offsets 0..0x27 once boot completes.
 
 ### Commands
 | Code | Name | Args | Returns |
@@ -63,12 +92,3 @@ struct mailbox {
 4. Host reads `sector_data` then writes `command = NOOP` to release.
 
 `seq` is included so the FPGA can ignore torn writes (Marty writes the mailbox as half-words; only the last byte of `command` should trigger execution).
-
-## Bank register semantics (port 0x0490)
-
-- 16-bit register; reset value = 0.
-- Bits [5:0] = bank index. Each bank = 1 MB of card space.
-- Bits [15:6] reserved, read as 0.
-- Marty writes 16-bit; FPGA latches both bytes on `IOWR_N` rising edge.
-
-**Implementation note:** the bank register lives in the FPGA's I/O space, not in the memory window. The Marty's IC card controller decodes `0x0490–0x0491` internally and translates to a memory-window access with a special qualifier — verify against MAME `fmtowns.cpp` and Tsugaru source before finalising. If the controller does *not* expose the bank write to the card pins, the bank is unselectable and we must use a different scheme (e.g. write-triggered bank via a magic address within the memory window).
