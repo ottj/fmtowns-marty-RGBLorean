@@ -1,0 +1,4351 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "17053de4-e0bf-4c39-bd8d-2423d0ae461d")
+	(paper "A3")
+	(title_block
+		(title "RGBLorean — VGA Output (ADV7123 + DE-15)")
+		(rev "A")
+		(comment 1 "ADV7123 triple 10-bit video DAC, 6-bit data from FPGA in MSB-aligned mode (low 4 bits tied GND)")
+		(comment 2 "Native sync (15 / 24 / 31 kHz) passes straight through — no scan conversion on this path")
+	)
+	(lib_symbols
+		(symbol "RGBLorean:ADV7123"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -15.24 50.8 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "ADV7123"
+				(at 15.24 50.8 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "Package_QFP:LQFP-48_7x7mm_P0.5mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADV7123.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Triple 10-bit 330 MHz video DAC (TQFP-48) — pinout per ADI rev D datasheet; verify before fab"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "ADV7123_0_1"
+				(rectangle
+					(start -15.24 -40.64)
+					(end 15.24 43.18)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "ADV7123_1_1"
+				(pin input line
+					(at -17.78 40.64 0)
+					(length 2.54)
+					(name "R9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 17.78 0)
+					(length 2.54)
+					(name "R0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 -43.18 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 12.7 0)
+					(length 2.54)
+					(name "G9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 10.16 0)
+					(length 2.54)
+					(name "G8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 7.62 0)
+					(length 2.54)
+					(name "G7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 5.08 0)
+					(length 2.54)
+					(name "G6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 2.54 0)
+					(length 2.54)
+					(name "G5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 0 0)
+					(length 2.54)
+					(name "G4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -2.54 0)
+					(length 2.54)
+					(name "G3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -5.08 0)
+					(length 2.54)
+					(name "G2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 38.1 0)
+					(length 2.54)
+					(name "R8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -7.62 0)
+					(length 2.54)
+					(name "G1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -10.16 0)
+					(length 2.54)
+					(name "G0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -43.18 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -15.24 0)
+					(length 2.54)
+					(name "B9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -17.78 0)
+					(length 2.54)
+					(name "B8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -20.32 0)
+					(length 2.54)
+					(name "B7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -22.86 0)
+					(length 2.54)
+					(name "B6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -25.4 0)
+					(length 2.54)
+					(name "B5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -27.94 0)
+					(length 2.54)
+					(name "B4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -30.48 0)
+					(length 2.54)
+					(name "B3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 35.56 0)
+					(length 2.54)
+					(name "R7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -33.02 0)
+					(length 2.54)
+					(name "B2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -35.56 0)
+					(length 2.54)
+					(name "B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -38.1 0)
+					(length 2.54)
+					(name "B0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 7.62 -43.18 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 0 180)
+					(length 2.54)
+					(name "CLOCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -2.54 180)
+					(length 2.54)
+					(name "~{BLANK}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -5.08 180)
+					(length 2.54)
+					(name "~{SYNC}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -7.62 180)
+					(length 2.54)
+					(name "~{PSAVE}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 45.72 270)
+					(length 2.54)
+					(name "VAA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 12.7 180)
+					(length 2.54)
+					(name "COMP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 33.02 0)
+					(length 2.54)
+					(name "R6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 15.24 180)
+					(length 2.54)
+					(name "VREF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "40"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 17.78 180)
+					(length 2.54)
+					(name "RSET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "41"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 40.64 180)
+					(length 2.54)
+					(name "IOR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "42"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 38.1 180)
+					(length 2.54)
+					(name "IOR_GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "43"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 35.56 180)
+					(length 2.54)
+					(name "IOG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "44"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 33.02 180)
+					(length 2.54)
+					(name "IOG_GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "45"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 30.48 180)
+					(length 2.54)
+					(name "IOB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "46"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 27.94 180)
+					(length 2.54)
+					(name "IOB_GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "47"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 45.72 270)
+					(length 2.54)
+					(name "VAA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "48"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 30.48 0)
+					(length 2.54)
+					(name "R5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 27.94 0)
+					(length 2.54)
+					(name "R4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 25.4 0)
+					(length 2.54)
+					(name "R3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 22.86 0)
+					(length 2.54)
+					(name "R2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 20.32 0)
+					(length 2.54)
+					(name "R1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "RGBLorean:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "RGBLorean:DSUB15_VGA"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -7.62 22.86 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "DSUB15_VGA"
+				(at 7.62 22.86 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "Connector_Dsub:DSUB-15_Female_Horizontal_P2.77x2.84mm_EdgePinOffset9.40mm_Housed_MountingHolesOffset11.32mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "DE-15 VGA female connector, right-angle, with shield"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DSUB15_VGA_0_1"
+				(rectangle
+					(start -7.62 -20.32)
+					(end 7.62 20.32)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "DSUB15_VGA_1_1"
+				(pin passive line
+					(at -10.16 17.78 0)
+					(length 2.54)
+					(name "Red"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "SGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -10.16 -7.62 0)
+					(length 2.54)
+					(name "ID0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -10.16 -10.16 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -12.7 0)
+					(length 2.54)
+					(name "HSYNC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -15.24 0)
+					(length 2.54)
+					(name "VSYNC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -10.16 -17.78 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "SHIELD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 15.24 0)
+					(length 2.54)
+					(name "Green"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 12.7 0)
+					(length 2.54)
+					(name "Blue"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -10.16 10.16 0)
+					(length 2.54)
+					(name "ID2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 7.62 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "RGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "GGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "BGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "+5V_DDC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "RGBLorean:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:+3V3"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 30.48 29.21) (xy 36.83 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ee8c65c-a51a-41a6-bd58-7cb6a0f654f6")
+	)
+	(wire
+		(pts
+			(xy 30.48 35.56) (xy 41.91 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9baa76fb-fe9b-4c3e-a42d-f7d86d7f0a76")
+	)
+	(wire
+		(pts
+			(xy 30.48 30.48) (xy 30.48 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e86cdb48-bf57-4925-8ff3-34ac347f943e")
+	)
+	(text "Signal path: FPGA (3.3V LVCMOS) -> ADV7123 R[9:4] / G[9:4] / B[9:4] (low 4 bits of each color tied GND -> MSB-aligned)\nFull-scale current = 1.235V / RSET * 10.5 = 26.67 mA into 75R parallel termination -> ~700 mVpp into 75R monitor load.\nSync: HSYNC/VSYNC driven separately from FPGA via 33R series Rs. ~SYNC (pin 36) tied HIGH = composite-sync-on-green disabled.\nNative sync passes through unchanged — VGA path is pixel-clock-rate passthrough, no scan conversion (that lives on hdmi_out).\n\nTODO: verify pin numbers against ADV7123 rev D datasheet before fab; consider 75R LC pi-filter on each color channel for EMI."
+		(exclude_from_sim no)
+		(at 30 240 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left top)
+		)
+		(uuid "92000000-0000-0000-0000-000000000001")
+	)
+	(label "VGA_R5"
+		(at 182.22 89.36 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000001")
+	)
+	(label "VGA_R4"
+		(at 182.22 91.9 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000002")
+	)
+	(label "VGA_R3"
+		(at 182.22 94.44 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000003")
+	)
+	(label "VGA_R2"
+		(at 182.22 96.98 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000004")
+	)
+	(label "VGA_R1"
+		(at 182.22 99.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000005")
+	)
+	(label "VGA_R0"
+		(at 182.22 102.06 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000006")
+	)
+	(label "GND"
+		(at 182.22 104.6 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000007")
+	)
+	(label "GND"
+		(at 182.22 107.14 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000008")
+	)
+	(label "GND"
+		(at 182.22 109.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000009")
+	)
+	(label "GND"
+		(at 182.22 112.22 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000000a")
+	)
+	(label "VGA_G5"
+		(at 182.22 117.3 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000000b")
+	)
+	(label "VGA_G4"
+		(at 182.22 119.84 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000000c")
+	)
+	(label "VGA_G3"
+		(at 182.22 122.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000000d")
+	)
+	(label "VGA_G2"
+		(at 182.22 124.92 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000000e")
+	)
+	(label "VGA_G1"
+		(at 182.22 127.46 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000000f")
+	)
+	(label "VGA_G0"
+		(at 182.22 130 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000010")
+	)
+	(label "GND"
+		(at 182.22 132.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000011")
+	)
+	(label "GND"
+		(at 182.22 135.08 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000012")
+	)
+	(label "GND"
+		(at 182.22 137.62 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000013")
+	)
+	(label "GND"
+		(at 182.22 140.16 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000014")
+	)
+	(label "VGA_B5"
+		(at 182.22 145.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000015")
+	)
+	(label "VGA_B4"
+		(at 182.22 147.78 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000016")
+	)
+	(label "VGA_B3"
+		(at 182.22 150.32 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000017")
+	)
+	(label "VGA_B2"
+		(at 182.22 152.86 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000018")
+	)
+	(label "VGA_B1"
+		(at 182.22 155.4 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-000000000019")
+	)
+	(label "VGA_B0"
+		(at 182.22 157.94 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000001a")
+	)
+	(label "GND"
+		(at 182.22 160.48 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000001b")
+	)
+	(label "GND"
+		(at 182.22 163.02 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000001c")
+	)
+	(label "GND"
+		(at 182.22 165.56 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000001d")
+	)
+	(label "GND"
+		(at 182.22 168.1 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95000000-0000-0000-0000-00000000001e")
+	)
+	(label "ANA_R"
+		(at 217.78 89.36 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-000000000001")
+	)
+	(label "GND"
+		(at 217.78 91.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-000000000002")
+	)
+	(label "ANA_G"
+		(at 217.78 94.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-000000000003")
+	)
+	(label "GND"
+		(at 217.78 96.98 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-000000000004")
+	)
+	(label "ANA_B"
+		(at 217.78 99.52 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-000000000005")
+	)
+	(label "GND"
+		(at 217.78 102.06 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-000000000006")
+	)
+	(label "RSET"
+		(at 217.78 112.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-000000000007")
+	)
+	(label "VREF"
+		(at 217.78 114.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-000000000008")
+	)
+	(label "COMP"
+		(at 217.78 117.3 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-000000000009")
+	)
+	(label "VGA_PIXCLK"
+		(at 217.78 130 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-00000000000a")
+	)
+	(label "VGA_BLANK_N"
+		(at 217.78 132.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-00000000000b")
+	)
+	(label "+3V3"
+		(at 217.78 135.08 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-00000000000c")
+	)
+	(label "+3V3"
+		(at 217.78 137.62 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96000000-0000-0000-0000-00000000000d")
+	)
+	(label "+3V3"
+		(at 194.92 84.28 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "97000000-0000-0000-0000-000000000001")
+	)
+	(label "+3V3"
+		(at 205.08 84.28 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "97000000-0000-0000-0000-000000000002")
+	)
+	(label "GND"
+		(at 192.38 170.64 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "97000000-0000-0000-0000-000000000003")
+	)
+	(label "GND"
+		(at 200 170.64 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "97000000-0000-0000-0000-000000000004")
+	)
+	(label "GND"
+		(at 207.62 170.64 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "97000000-0000-0000-0000-000000000005")
+	)
+	(label "RSET"
+		(at 245 113.19 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000001")
+	)
+	(label "GND"
+		(at 245 120.81 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000002")
+	)
+	(label "VREF"
+		(at 255 116.19 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000003")
+	)
+	(label "GND"
+		(at 255 123.81 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000004")
+	)
+	(label "COMP"
+		(at 265 116.19 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000005")
+	)
+	(label "GND"
+		(at 265 123.81 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000006")
+	)
+	(label "+3V3"
+		(at 195 66.19 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000007")
+	)
+	(label "GND"
+		(at 195 73.81 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000008")
+	)
+	(label "+3V3"
+		(at 205 66.19 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000009")
+	)
+	(label "GND"
+		(at 205 73.81 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-00000000000a")
+	)
+	(label "+3V3"
+		(at 215 66.19 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-00000000000b")
+	)
+	(label "GND"
+		(at 215 73.81 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-00000000000c")
+	)
+	(label "ANA_R"
+		(at 275 85.19 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-00000000000d")
+	)
+	(label "GND"
+		(at 275 92.81 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-00000000000e")
+	)
+	(label "ANA_G"
+		(at 285 85.19 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-00000000000f")
+	)
+	(label "GND"
+		(at 285 92.81 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000010")
+	)
+	(label "ANA_B"
+		(at 295 85.19 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000011")
+	)
+	(label "GND"
+		(at 295 92.81 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000012")
+	)
+	(label "VGA_HSYNC"
+		(at 286.19 145 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000013")
+	)
+	(label "HSYNC_OUT"
+		(at 293.81 145 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000014")
+	)
+	(label "VGA_VSYNC"
+		(at 286.19 148 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000015")
+	)
+	(label "VSYNC_OUT"
+		(at 293.81 148 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c000000-0000-0000-0000-000000000016")
+	)
+	(label "ANA_R"
+		(at 309.84 112.22 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-000000000001")
+	)
+	(label "ANA_G"
+		(at 309.84 114.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-000000000002")
+	)
+	(label "ANA_B"
+		(at 309.84 117.3 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-000000000003")
+	)
+	(label "GND"
+		(at 309.84 124.92 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-000000000004")
+	)
+	(label "GND"
+		(at 309.84 127.46 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-000000000005")
+	)
+	(label "GND"
+		(at 309.84 130 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-000000000006")
+	)
+	(label "GND"
+		(at 309.84 132.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-000000000007")
+	)
+	(label "GND"
+		(at 309.84 137.62 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-000000000008")
+	)
+	(label "HSYNC_OUT"
+		(at 309.84 145.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-000000000009")
+	)
+	(label "VSYNC_OUT"
+		(at 309.84 147.78 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d000000-0000-0000-0000-00000000000a")
+	)
+	(label "GND"
+		(at 330.16 130 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9d000000-0000-0000-0000-00000000000b")
+	)
+	(global_label "VGA_R5"
+		(shape input)
+		(at 170 89.36 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000001")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 89.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_R4"
+		(shape input)
+		(at 170 91.9 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000002")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 91.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_R3"
+		(shape input)
+		(at 170 94.44 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000003")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 94.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_R2"
+		(shape input)
+		(at 170 96.98 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000004")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 96.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_R1"
+		(shape input)
+		(at 170 99.52 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000005")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 99.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_R0"
+		(shape input)
+		(at 170 102.06 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000006")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 102.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_G5"
+		(shape input)
+		(at 170 117.3 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000007")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 117.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_G4"
+		(shape input)
+		(at 170 119.84 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000008")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 119.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_G3"
+		(shape input)
+		(at 170 122.38 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000009")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 122.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_G2"
+		(shape input)
+		(at 170 124.92 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-00000000000a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 124.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_G1"
+		(shape input)
+		(at 170 127.46 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-00000000000b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 127.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_G0"
+		(shape input)
+		(at 170 130 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-00000000000c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 130 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_B5"
+		(shape input)
+		(at 170 145.24 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-00000000000d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 145.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_B4"
+		(shape input)
+		(at 170 147.78 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-00000000000e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 147.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_B3"
+		(shape input)
+		(at 170 150.32 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-00000000000f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 150.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_B2"
+		(shape input)
+		(at 170 152.86 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000010")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 152.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_B1"
+		(shape input)
+		(at 170 155.4 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000011")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 155.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_B0"
+		(shape input)
+		(at 170 157.94 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000012")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170 157.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_PIXCLK"
+		(shape input)
+		(at 250 130 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "94000000-0000-0000-0000-000000000013")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 250 130 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_BLANK_N"
+		(shape input)
+		(at 250 132.54 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "94000000-0000-0000-0000-000000000014")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 250 132.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_HSYNC"
+		(shape input)
+		(at 280 145 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000015")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 280 145 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VGA_VSYNC"
+		(shape input)
+		(at 280 148 180)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify right)
+		)
+		(uuid "94000000-0000-0000-0000-000000000016")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 280 148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(hierarchical_label "+3V3"
+		(shape input)
+		(at 30.48 30.48 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify right)
+		)
+		(uuid "93000000-0000-0000-0000-000000000001")
+	)
+	(hierarchical_label "GND"
+		(shape passive)
+		(at 30.48 35.56 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify right)
+		)
+		(uuid "93000000-0000-0000-0000-000000000002")
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 36.83 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0fa666bb-07e9-4ac2-8b78-dc35f226585f")
+		(property "Reference" "#PWR012"
+			(at 36.83 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 36.83 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 36.83 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "80f66213-f102-4219-b817-b0230bb54a02")
+		)
+		(instances
+			(project ""
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 41.91 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6fb86312-e66f-4e7a-9972-ee5c83659d8e")
+		(property "Reference" "#PWR013"
+			(at 41.91 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 41.91 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 41.91 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1bb2fb79-cc90-4f99-a80c-0786ecd765f6")
+		)
+		(instances
+			(project ""
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:ADV7123")
+		(at 200 130 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98000000-0000-0000-0000-000000000001")
+		(property "Reference" "U_DAC1"
+			(at 200 76.99 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "ADV7123KSTZ140"
+			(at 200 184.94 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "Package_QFP:LQFP-48_7x7mm_P0.5mm"
+			(at 200 130 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADV7123.pdf"
+			(at 200 130 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Triple 10-bit 330 MHz video DAC"
+			(at 200 130 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99000000-0000-0000-0000-000000000001")
+		)
+		(pin "2"
+			(uuid "99000000-0000-0000-0000-000000000002")
+		)
+		(pin "3"
+			(uuid "99000000-0000-0000-0000-000000000003")
+		)
+		(pin "4"
+			(uuid "99000000-0000-0000-0000-000000000004")
+		)
+		(pin "5"
+			(uuid "99000000-0000-0000-0000-000000000005")
+		)
+		(pin "6"
+			(uuid "99000000-0000-0000-0000-000000000006")
+		)
+		(pin "7"
+			(uuid "99000000-0000-0000-0000-000000000007")
+		)
+		(pin "8"
+			(uuid "99000000-0000-0000-0000-000000000008")
+		)
+		(pin "9"
+			(uuid "99000000-0000-0000-0000-000000000009")
+		)
+		(pin "10"
+			(uuid "99000000-0000-0000-0000-00000000000a")
+		)
+		(pin "11"
+			(uuid "99000000-0000-0000-0000-00000000000b")
+		)
+		(pin "12"
+			(uuid "99000000-0000-0000-0000-00000000000c")
+		)
+		(pin "13"
+			(uuid "99000000-0000-0000-0000-00000000000d")
+		)
+		(pin "14"
+			(uuid "99000000-0000-0000-0000-00000000000e")
+		)
+		(pin "15"
+			(uuid "99000000-0000-0000-0000-00000000000f")
+		)
+		(pin "16"
+			(uuid "99000000-0000-0000-0000-000000000010")
+		)
+		(pin "17"
+			(uuid "99000000-0000-0000-0000-000000000011")
+		)
+		(pin "18"
+			(uuid "99000000-0000-0000-0000-000000000012")
+		)
+		(pin "19"
+			(uuid "99000000-0000-0000-0000-000000000013")
+		)
+		(pin "20"
+			(uuid "99000000-0000-0000-0000-000000000014")
+		)
+		(pin "21"
+			(uuid "99000000-0000-0000-0000-000000000015")
+		)
+		(pin "22"
+			(uuid "99000000-0000-0000-0000-000000000016")
+		)
+		(pin "23"
+			(uuid "99000000-0000-0000-0000-000000000017")
+		)
+		(pin "24"
+			(uuid "99000000-0000-0000-0000-000000000018")
+		)
+		(pin "25"
+			(uuid "99000000-0000-0000-0000-000000000019")
+		)
+		(pin "26"
+			(uuid "99000000-0000-0000-0000-00000000001a")
+		)
+		(pin "27"
+			(uuid "99000000-0000-0000-0000-00000000001b")
+		)
+		(pin "28"
+			(uuid "99000000-0000-0000-0000-00000000001c")
+		)
+		(pin "29"
+			(uuid "99000000-0000-0000-0000-00000000001d")
+		)
+		(pin "30"
+			(uuid "99000000-0000-0000-0000-00000000001e")
+		)
+		(pin "31"
+			(uuid "99000000-0000-0000-0000-00000000001f")
+		)
+		(pin "32"
+			(uuid "99000000-0000-0000-0000-000000000020")
+		)
+		(pin "33"
+			(uuid "99000000-0000-0000-0000-000000000021")
+		)
+		(pin "34"
+			(uuid "99000000-0000-0000-0000-000000000022")
+		)
+		(pin "35"
+			(uuid "99000000-0000-0000-0000-000000000023")
+		)
+		(pin "36"
+			(uuid "99000000-0000-0000-0000-000000000024")
+		)
+		(pin "37"
+			(uuid "99000000-0000-0000-0000-000000000025")
+		)
+		(pin "38"
+			(uuid "99000000-0000-0000-0000-000000000026")
+		)
+		(pin "39"
+			(uuid "99000000-0000-0000-0000-000000000027")
+		)
+		(pin "40"
+			(uuid "99000000-0000-0000-0000-000000000028")
+		)
+		(pin "41"
+			(uuid "99000000-0000-0000-0000-000000000029")
+		)
+		(pin "42"
+			(uuid "99000000-0000-0000-0000-00000000002a")
+		)
+		(pin "43"
+			(uuid "99000000-0000-0000-0000-00000000002b")
+		)
+		(pin "44"
+			(uuid "99000000-0000-0000-0000-00000000002c")
+		)
+		(pin "45"
+			(uuid "99000000-0000-0000-0000-00000000002d")
+		)
+		(pin "46"
+			(uuid "99000000-0000-0000-0000-00000000002e")
+		)
+		(pin "47"
+			(uuid "99000000-0000-0000-0000-00000000002f")
+		)
+		(pin "48"
+			(uuid "99000000-0000-0000-0000-000000000030")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "U_DAC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:DSUB15_VGA")
+		(at 320 130 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98000000-0000-0000-0000-000000000002")
+		(property "Reference" "J3"
+			(at 320 107.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DSUB15_VGA"
+			(at 320 152.86 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Dsub:DSUB-15_Female_Horizontal_P2.77x2.84mm_EdgePinOffset9.40mm_Housed_MountingHolesOffset11.32mm"
+			(at 320 130 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 320 130 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "DE-15 VGA female, right-angle"
+			(at 320 130 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99000000-0000-0000-0000-000000000031")
+		)
+		(pin "2"
+			(uuid "99000000-0000-0000-0000-000000000032")
+		)
+		(pin "3"
+			(uuid "99000000-0000-0000-0000-000000000033")
+		)
+		(pin "4"
+			(uuid "99000000-0000-0000-0000-000000000034")
+		)
+		(pin "5"
+			(uuid "99000000-0000-0000-0000-000000000035")
+		)
+		(pin "6"
+			(uuid "99000000-0000-0000-0000-000000000036")
+		)
+		(pin "7"
+			(uuid "99000000-0000-0000-0000-000000000037")
+		)
+		(pin "8"
+			(uuid "99000000-0000-0000-0000-000000000038")
+		)
+		(pin "9"
+			(uuid "99000000-0000-0000-0000-000000000039")
+		)
+		(pin "10"
+			(uuid "99000000-0000-0000-0000-00000000003a")
+		)
+		(pin "11"
+			(uuid "99000000-0000-0000-0000-00000000003b")
+		)
+		(pin "12"
+			(uuid "99000000-0000-0000-0000-00000000003c")
+		)
+		(pin "13"
+			(uuid "99000000-0000-0000-0000-00000000003d")
+		)
+		(pin "14"
+			(uuid "99000000-0000-0000-0000-00000000003e")
+		)
+		(pin "15"
+			(uuid "99000000-0000-0000-0000-00000000003f")
+		)
+		(pin "16"
+			(uuid "99000000-0000-0000-0000-000000000040")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:R")
+		(at 245 117 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-000000000001")
+		(property "Reference" "R_SET1"
+			(at 247 115 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "560R 1%"
+			(at 247 118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 245 117 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245 117 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Full-scale current set resistor — Ifs = 1.235V / RSET * 10.5"
+			(at 245 117 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-000000000001")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-000000000002")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "R_SET1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:C")
+		(at 255 120 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-000000000002")
+		(property "Reference" "C_VREF1"
+			(at 257 118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 257 121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 255 120 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255 120 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "VREF decoupling cap"
+			(at 255 120 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-000000000003")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-000000000004")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "C_VREF1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:C")
+		(at 265 120 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-000000000003")
+		(property "Reference" "C_COMP1"
+			(at 267 118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 267 121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 265 120 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 265 120 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "COMP decoupling cap"
+			(at 265 120 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-000000000005")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-000000000006")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "C_COMP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:C")
+		(at 195 70 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-000000000004")
+		(property "Reference" "C_VAA1"
+			(at 197 68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 197 71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 195 70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195 70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "VAA decoupling, pin 38"
+			(at 195 70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-000000000007")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-000000000008")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "C_VAA1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:C")
+		(at 205 70 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-000000000005")
+		(property "Reference" "C_VAA2"
+			(at 207 68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 207 71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 205 70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205 70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "VAA decoupling, pin 48"
+			(at 205 70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-000000000009")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-00000000000a")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "C_VAA2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:C")
+		(at 215 70 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-000000000006")
+		(property "Reference" "C_BULK1"
+			(at 217 68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 217 71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 215 70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215 70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "ADV7123 VAA bulk cap"
+			(at 215 70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-00000000000b")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-00000000000c")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "C_BULK1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:R")
+		(at 275 89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-000000000007")
+		(property "Reference" "R_T_R1"
+			(at 277 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "75R 1%"
+			(at 277 90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 275 89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 275 89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Red termination — ANA_R to GND"
+			(at 275 89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-00000000000d")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-00000000000e")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "R_T_R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:R")
+		(at 285 89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-000000000008")
+		(property "Reference" "R_T_G1"
+			(at 287 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "75R 1%"
+			(at 287 90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 285 89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 285 89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Green termination"
+			(at 285 89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-00000000000f")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-000000000010")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "R_T_G1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:R")
+		(at 295 89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-000000000009")
+		(property "Reference" "R_T_B1"
+			(at 297 87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "75R 1%"
+			(at 297 90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 295 89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 295 89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Blue termination"
+			(at 295 89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-000000000011")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-000000000012")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "R_T_B1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:R")
+		(at 290 145 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-00000000000a")
+		(property "Reference" "R_HS1"
+			(at 290 142 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33R"
+			(at 290 148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 290 145 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 290 145 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "HSYNC series termination"
+			(at 290 145 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-000000000013")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-000000000014")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "R_HS1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RGBLorean:R")
+		(at 290 148 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a000000-0000-0000-0000-00000000000b")
+		(property "Reference" "R_VS1"
+			(at 290 150 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33R"
+			(at 290 152 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 290 148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 290 148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "VSYNC series termination"
+			(at 290 148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b000000-0000-0000-0000-000000000015")
+		)
+		(pin "2"
+			(uuid "9b000000-0000-0000-0000-000000000016")
+		)
+		(instances
+			(project "RGBLorean"
+				(path "/61a72ed1-24e8-426b-82a3-29a860c4c4c3/bd819153-716f-489e-9114-ff10fb81f356"
+					(reference "R_VS1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "6")
+		)
+	)
+)
