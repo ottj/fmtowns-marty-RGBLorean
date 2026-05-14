@@ -2,14 +2,20 @@
 ;
 ; iosys_stub.asm — RGBLorean "fake IO.SYS" for FM Towns Marty.
 ;
-; Layout (after fixing the sector-size assumption — see bootsec.asm header):
+; Boot model (verified empirically with `MD B000:0` in Tsugaru):
 ;
-;   - This file is concatenated at file offset 0x400 within card.bin
-;     (= sector 1, with sector size 1024 bytes).
-;   - Marty ROM loads it into RAM at physical 0x400 and **jumps directly
-;     to RAM 0x400** — entry point is therefore the first byte of this
-;     file, not 0x100 in.
-;   - 1 sector = 1024 bytes total.
+;   - The Marty BIOS does NOT relocate IO.SYS to low RAM. It maps the
+;     entire IC card image at segment 0xB000 and `jmp 0xB000:0x400`
+;     directly into sector 1.
+;   - At our entry: CS=0xB000, IP=0x400. We execute in place from the
+;     card window — writes to CS:offset would target the card, not RAM.
+;   - Side-effect: low RAM (0x400..0x7FF) is BIOS scratch we are free
+;     to clobber via DS=0 absolute writes, as long as we do NOT need
+;     anything that previously lived there.
+;
+; Layout in card.bin:
+;   - This file is concatenated at file offset 0x400 (sector 1, 1024 B).
+;   - `org 0x400` aligns NASM's symbol values to runtime IP.
 ;
 ; What we do:
 ;   1) Set DS = ES = SS = 0 (segment registers may already be 0 but we
@@ -21,6 +27,9 @@
 ; after the BIOS sees IPL4 + LBA/count and loads sector 1.
 
 bits 16
+
+; Runtime IP at entry is 0x400 (see boot-model comment above).
+org 0x400
 
 iosys_stub_start:
 

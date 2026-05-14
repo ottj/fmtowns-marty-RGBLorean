@@ -54,6 +54,9 @@ firmware/fpga/build/
 # Marty Bios files
 firmware/marty
 
+# Data, like CD images
+data/
+
 # x86 build artefacts
 firmware/x86/**/*.bin
 firmware/x86/**/*.o
