@@ -44,6 +44,8 @@ Initial FPGA capacity (Phase 1) is just the first 8 KB of BRAM; later phases can
 
 **Sector-size convention:** Marty IC-card sectors are **1024 bytes**, not 512. The boot sector (sector 0) lives at file offsets `0x000..0x3FF`; the IPL payload (sector 1, LBA=1) at `0x400..0x7FF`. See `docs/context.md §5` and `firmware/x86/ipl/` for the verified layout.
 
+**Execution model:** The Marty BIOS does not copy IO.SYS into low RAM. It maps the IC card image at host segment `0xB000` (= physical `0xB0000`) and `jmp 0xB000:0x400` directly into the payload. Code therefore runs **in place from the card window** (= FPGA BRAM on real hardware), with `CS=0xB000, IP=0x400` at entry. NASM payload sources must `org 0x400`. Confirmed in Tsugaru `MD B000:0` showing the boot sector's IPL4 magic verbatim.
+
 ## Mailbox layout (offset `0x00000000` within window)
 
 ```c

@@ -51,6 +51,10 @@ firmware/fpga/build/
 *.cfg
 *.fasm
 
+# Icarus Verilog sim artefacts (regenerable from .sv via `make` in sim/)
+*.vvp
+*.vcd
+
 # Marty Bios files
 firmware/marty
 
